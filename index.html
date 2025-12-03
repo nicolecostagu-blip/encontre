@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre seu Pet - Ajude animais perdidos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>🐾 Encontre seu Pet 🐾</h1>
+        <h2>Somos um site com foco em ajudar pessoas a encontrar seus animais de estimação perdidos</h2>
+        <h3>Nosso objetivo é conectar tutores de animais perdidos com pessoas que possam ter encontrado esses animais</h3>
+        <p>Nosso site oferece uma plataforma onde os usuários podem criar perfis para seus animais de estimação, postar fotos e informações sobre o animal perdido e também procurar por animais encontrados por outras pessoas.</p>
+        
+        <div class="animal-icons">
+            <span>🐶</span>
+            <span>🐱</span>
+            <span>🐰</span>
+            <span>🐦</span>
+            <span>🐹</span>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="card">
+            <h2 class="card-title">📝 Cadastro da Pessoa</h2>
+            <div class="paw-prints">🐾 🐾 🐾</div>
+            
+            <form action="https://formspree.io/f/mjknrdn" method="POST">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
+                    
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="" disabled selected>Selecione seu estado</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                    </select>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Gênero:</legend>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="masculino" name="genero" value="masculino" required>
+                            <label for="masculino">Masculino</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="feminino" name="genero" value="feminino" required>
+                            <label for="feminino">Feminino</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="outro" name="genero" value="outro" required>
+                            <label for="outro">Outro</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="btn-submit">Salvar Meus Dados</button>
+            </form>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-title">🐕 Cadastro do Animal</h2>
+            <div class="paw-prints">🐾 🐾 🐾</div>
+            
+            <form action="https://formspree.io/f/mjknrdn" method="POST">
+                <fieldset>
+                    <legend>O que aconteceu?</legend>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="perdi" name="situacao" value="perdi" required>
+                            <label for="perdi">Perdi meu pet</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="encontrei" name="situacao" value="encontrei" required>
+                            <label for="encontrei">Encontrei um pet</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Informações do Animal</legend>
+                    <label for="nome-animal">Nome do Animal (se souber):</label>
+                    <input type="text" id="nome-animal" name="nome_animal" placeholder="Ex: Rex, Luna, etc.">
+                    
+                    <label for="tipo-animal">Tipo de Animal:</label>
+                    <select id="tipo-animal" name="tipo_animal" required>
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="cachorro">🐶 Cachorro</option>
+                        <option value="gato">🐱 Gato</option>
+                        <option value="passaro">🐦 Pássaro</option>
+                        <option value="coelho">🐰 Coelho</option>
+                        <option value="outro">❓ Outro</option>
+                    </select>
+                    
+                    <label for="raca">Raça (se souber):</label>
+                    <input type="text" id="raca" name="raca" placeholder="Ex: Vira-lata, Siames, etc.">
+                    
+                    <label for="cor">Cor Principal:</label>
+                    <input type="text" id="cor" name="cor" placeholder="Ex: Marrom, Branco, Preto" required>
+                    
+                    <label for="tamanho">Tamanho:</label>
+                    <select id="tamanho" name="tamanho">
+                        <option value="" selected>Não sei</option>
+                        <option value="pequeno">Pequeno (até 10kg)</option>
+                        <option value="medio">Médio (10-25kg)</option>
+                        <option value="grande">Grande (acima de 25kg)</option>
+                    </select>
+                    
+                    <label for="data-evento">Data do ocorrido:</label>
+                    <input type="date" id="data-evento" name="data_evento" required>
+                    
+                    <label for="local">Local (rua, bairro):</label>
+                    <input type="text" id="local" name="local" placeholder="Onde perdeu/encontrou" required>
+                    
+                    <label for="descricao">Detalhes importantes:</label>
+                    <textarea id="descricao" name="descricao" rows="4" placeholder="Ex: Tem coleira azul, mancha branca na pata, é medroso, etc."></textarea>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Foto do Animal</legend>
+                    <p style="color: #666; margin-bottom: 15px;">💡 Dica: Uma foto clara aumenta as chances de reconhecimento!</p>
+                    <input type="text" id="foto-link" name="foto_link" placeholder="Cole aqui o link da foto (ex: Google Fotos, Imgur)">
+                    <small style="color: #888;">Ou envie por email após o cadastro</small>
+                </fieldset>
+                
+                <button type="submit" class="btn-submit">Cadastrar Animal</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; color: #888;">
+        <p>❤ Projeto desenvolvido com amor para ajudar animais ❤</p>
+        <p>© 2024 Encontre seu Pet - Todos os direitos reservados</p>
+        <div style="font-size: 1.5rem; margin-top: 10px;">🐶 🐱 🐹 🐰 🦜 🐢</div>
+    </footer>
+</body>
+</html>
